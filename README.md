@@ -43,6 +43,14 @@ Customize your site's classification settings in the ``settings`` module:
 	CLASSIFICATION_BACKGROUND_COLOR = 'green'
     CLASSIFICATION_LINK = '/security'
 
+An optional bottom banner may be added:
+
+    CLASSIFICATION_FOOTER_ENABLED = True
+
+The banners may be disabled with:
+
+    CLASSIFICATION_BANNER_ENABLED = False
+
 Usage
 -----
 
