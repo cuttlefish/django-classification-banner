@@ -37,10 +37,10 @@ Add the classification banner context processor to the ```TEMPLATE_CONTEXT_PROCE
     )
 
 Customize your site's classification settings in the ``settings`` module:
-	
-	CLASSIFICATION_TEXT = 'Unclassified//FOUO'
-	CLASSIFICATION_TEXT_COLOR = 'black'
-	CLASSIFICATION_BACKGROUND_COLOR = 'green'
+
+    CLASSIFICATION_TEXT = 'Unclassified//FOUO'
+    CLASSIFICATION_TEXT_COLOR = 'black'
+    CLASSIFICATION_BACKGROUND_COLOR = 'green'
     CLASSIFICATION_LINK = '/security'
 
 An optional bottom banner may be added:
@@ -58,33 +58,32 @@ Once installed, you can easily add a classification banner to any template on yo
 
 First load the classification banner in your template:
 
-	{% load classification_banner %}
-	
+    {% load classification_banner %}
+
 Then add the banner to your page:
 
-	{% classification_banner %}
-
+    {% classification_banner %}
 
 A full example:
 
-	{% load classification_banner %}
-	<html>
-		<head>
-    		<title>FOO</title>
-		</head>
-		<body>
-			{% classification_banner %}
-		</body>
-	</html>
+    {% load classification_banner %}
+    <html>
+        <head>
+            <title>FOO</title>
+        </head>
+        <body>
+            {% classification_banner %}
+        </body>
+    </html>
 
 You can also override your default settings from any template:
 
     {% load classification_banner %}
-	<html>
-		<head>
-    		<title>FOO - Confidential</title>
-		</head>
-		<body>
-			{% classification_banner classification_text='Confidential' classification_text_color='black' classification_background_color='red'%}
-		</body>
-	</html>
+    <html>
+        <head>
+            <title>FOO - Confidential</title>
+        </head>
+        <body>
+            {% classification_banner classification_text='Confidential' classification_text_color='black' classification_background_color='red'%}
+        </body>
+    </html>
