@@ -8,7 +8,7 @@ def classification_banner(context, **kwargs):
     response = dict()
 
     for var in ['classification_text', 'classification_text_color', 'classification_background_color',
-                'classification_banner_enabled', 'classification_link']:
+                'classification_banner_enabled', 'classification_link', 'classification_footer_enabled']:
         response[var] = kwargs.get(var, context.get(var))
 
     return response
